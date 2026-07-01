@@ -30,6 +30,11 @@
             transition: all 0.3s ease;
         }
         .card-blur:hover { background: rgba(255, 255, 255, 0.7); }
+
+        /* Hareketli Şerit CSS */
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .marquee-container { display: flex; overflow: hidden; width: 100%; border-top: 1px solid #fdf2f8; border-bottom: 1px solid #fdf2f8; padding: 20px 0; background: #fff; }
+        .marquee { display: flex; width: 200%; animation: scroll 20s linear infinite; }
     </style>
 </head>
 <body>
@@ -59,26 +64,26 @@
         <h2 class="text-3xl font-semibold mb-12 text-center text-stone-800">Uygulamalarımız & Fiyatlar</h2>
         
         <div class="space-y-4 mb-12">
-            <div class="card-blur p-6 rounded-2xl">
-                <details class="group">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-lg">
-                        Lazer & Bölgesel İncelme
-                        <span class="text-sm text-ulgenPink font-semibold">Detaylar</span>
-                    </summary>
-                    <p class="text-stone-600 mt-4 font-light border-t pt-4">Lazer Epilasyon | Bölgesel İncelme Hizmetleri İçin Bilgi Alın</p>
-                </details>
-            </div>
-            <div class="card-blur p-6 rounded-2xl">
-                <details class="group">
-                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-lg">
-                        Bakım & Tırnak Sanatı
-                        <span class="text-sm text-ulgenPink font-semibold">Detaylar</span>
-                    </summary>
-                    <p class="text-stone-600 mt-4 font-light border-t pt-4">Protez Tırnak | Cilt Bakımı | İpek Kirpik Uygulamaları</p>
-                </details>
-            </div>
+            <!-- (Hizmet detayların aynı) -->
+            <div class="card-blur p-6 rounded-2xl"><details class="group"><summary class="flex justify-between items-center font-medium cursor-pointer list-none text-lg">Lazer & Bölgesel İncelme<span class="text-sm text-ulgenPink font-semibold">Detaylar</span></summary><p class="text-stone-600 mt-4 font-light border-t pt-4">Lazer Epilasyon | Bölgesel İncelme Hizmetleri İçin Bilgi Alın</p></details></div>
+            <div class="card-blur p-6 rounded-2xl"><details class="group"><summary class="flex justify-between items-center font-medium cursor-pointer list-none text-lg">Bakım & Tırnak Sanatı<span class="text-sm text-ulgenPink font-semibold">Detaylar</span></summary><p class="text-stone-600 mt-4 font-light border-t pt-4">Protez Tırnak | Cilt Bakımı | İpek Kirpik Uygulamaları</p></details></div>
         </div>
+    </section>
 
+    <!-- HAREKETLİ ŞERİT BURADA -->
+    <div class="marquee-container">
+        <div class="marquee gap-16 items-center">
+            <span class="text-stone-400 font-bold text-lg tracking-widest">ESTÉE LAUDER</span>
+            <span class="text-stone-400 font-bold text-lg tracking-widest">SEPHORA</span>
+            <span class="text-ulgenPink font-bold text-lg tracking-widest">ULGEN BEAUTY</span>
+            <span class="text-stone-400 font-bold text-lg tracking-widest">MAC COSMETICS</span>
+            <span class="text-stone-400 font-bold text-lg tracking-widest">ESTÉE LAUDER</span>
+            <span class="text-stone-400 font-bold text-lg tracking-widest">SEPHORA</span>
+            <span class="text-ulgenPink font-bold text-lg tracking-widest">ULGEN BEAUTY</span>
+        </div>
+    </div>
+
+    <section class="max-w-4xl mx-auto px-8 py-20">
         <div class="bg-ulgenPink text-white p-8 rounded-3xl shadow-xl">
             <h3 class="text-xl font-semibold mb-6">Randevu Başlat</h3>
             <form id="randevuForm" class="grid gap-4">
@@ -90,9 +95,7 @@
                     <option>Protez Tırnak</option>
                     <option>İpek Kirpik & Lifting</option>
                 </select>
-                <button type="button" onclick="gonder()" class="bg-white text-ulgenPink font-bold py-4 rounded-xl hover:bg-pink-50 transition">
-                    WhatsApp'tan Onay Al
-                </button>
+                <button type="button" onclick="gonder()" class="bg-white text-ulgenPink font-bold py-4 rounded-xl hover:bg-pink-50 transition">WhatsApp'tan Onay Al</button>
             </form>
         </div>
     </section>
