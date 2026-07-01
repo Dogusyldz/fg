@@ -12,14 +12,13 @@
         .glass { background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
         .glass-btn { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.4); }
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .animate-marquee { animation: marquee 25s linear infinite; }
+        .animate-marquee { animation: marquee 30s linear infinite; }
     </style>
 </head>
 <body class="bg-stone-100 text-stone-800 font-body">
 
     <!-- NAVBAR -->
     <nav class="max-w-6xl mx-auto p-8 flex justify-between items-center">
-        <!-- İsim ve Beauty Alt Alta -->
         <div class="leading-none text-center">
             <h1 class="text-xl font-bold tracking-widest uppercase">Sıla Sak</h1>
             <span class="text-rose-400 text-xs tracking-[0.2em] uppercase font-semibold">Beauty</span>
@@ -37,9 +36,20 @@
     </header>
 
     <!-- HİZMET ŞERİDİ (Marquee) -->
-    <section class="py-10 overflow-hidden bg-rose-50/50 border-y border-rose-100">
-        <div class="flex animate-marquee gap-12 whitespace-nowrap text-rose-500 font-bold tracking-widest uppercase text-sm">
-            <span>💅 Protez Tırnak</span> <span>👁️ İpek Kirpik</span> <span>✨ Kalıcı Oje</span> <span>💄 Kalıcı Makyaj</span> <span>🌸 Cilt Bakım</span> <span>☀️ Lazer Epilasyon</span> <span>💅 Protez Tırnak</span> <span>👁️ İpek Kirpik</span> <span>✨ Kalıcı Oje</span> <span>💄 Kalıcı Makyaj</span> <span>🌸 Cilt Bakım</span> <span>☀️ Lazer Epilasyon</span>
+    <section class="py-12 overflow-hidden bg-rose-50/50 border-y border-rose-100">
+        <div class="flex animate-marquee gap-20 whitespace-nowrap text-rose-500 font-bold tracking-widest uppercase text-xl md:text-2xl">
+            <span>Protez Tırnak</span> 
+            <span>İpek Kirpik</span> 
+            <span>Kalıcı Oje</span> 
+            <span>Kalıcı Makyaj</span> 
+            <span>Cilt Bakım</span> 
+            <span>Lazer Epilasyon</span> 
+            <span>Protez Tırnak</span> 
+            <span>İpek Kirpik</span> 
+            <span>Kalıcı Oje</span> 
+            <span>Kalıcı Makyaj</span> 
+            <span>Cilt Bakım</span> 
+            <span>Lazer Epilasyon</span>
         </div>
     </section>
 
