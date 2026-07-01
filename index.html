@@ -3,69 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        armada: { navy: '#002f6c', red: '#e30613' }
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .premium-blur { backdrop-filter: saturate(180%) blur(20px); }
-        /* Logo şeridi animasyonu */
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .animate-marquee { animation: marquee 20s linear infinite; }
     </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-800">
 
-    <!-- NAVBAR: Aktif Linkler -->
-    <nav class="fixed w-full top-0 z-[100] bg-white/70 premium-blur border-b border-black/5">
+    <!-- NAVBAR: Armada Laciverti -->
+    <nav class="fixed w-full top-0 z-[100] bg-white/80 premium-blur border-b border-armada-navy/10">
         <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-            <a href="#" class="text-3xl font-extrabold tracking-tighter text-blue-950">ARMADA<span class="text-red-600">.</span></a>
+            <a href="#" class="text-3xl font-extrabold tracking-tighter text-armada-navy">ARMADA<span class="text-armada-red">.</span></a>
             
             <div class="hidden lg:flex gap-10 text-[13px] font-semibold tracking-[0.15em] text-slate-500">
-                <a href="#magazalar" class="hover:text-blue-900 transition-colors">MAĞAZALAR</a>
-                <a href="#etkinlikler" class="hover:text-blue-900 transition-colors">ETKİNLİKLER</a>
-                <a href="tel:+905461253393" class="text-red-600 hover:text-red-800 transition-colors">İLETİŞİM</a>
+                <a href="#magazalar" class="hover:text-armada-navy transition-colors">MAĞAZALAR</a>
+                <a href="#kampanyalar" class="hover:text-armada-navy transition-colors">KAMPANYALAR</a>
             </div>
 
-            <button onclick="window.location.href='#'" class="bg-blue-950 text-white px-8 py-3 rounded-full text-xs font-bold hover:bg-black transition-all">ZİYARET PLANLA</button>
+            <button class="bg-armada-navy text-white px-8 py-3 rounded-full text-xs font-bold hover:bg-armada-red transition-all">ZİYARET PLANLA</button>
         </div>
     </nav>
 
-    <!-- HERO & BENTO GRID -->
+    <!-- HERO: Lacivert ve Kırmızı Uyumu -->
     <main class="max-w-7xl mx-auto px-6 pt-36 pb-10">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-auto lg:h-[500px]">
-            <div class="lg:col-span-2 rounded-[2rem] bg-blue-950 p-12 flex flex-col justify-end text-white relative overflow-hidden">
+            <div class="lg:col-span-2 rounded-[2rem] bg-armada-navy p-12 flex flex-col justify-end text-white relative overflow-hidden shadow-2xl">
                 <h2 class="text-6xl font-bold mb-6">Yazın Ritmini<br>Hisset.</h2>
-                <button onclick="window.location.href='#kampanyalar'" class="bg-white text-blue-950 px-8 py-3 rounded-full w-fit font-bold hover:bg-slate-200 transition-all">İncele</button>
+                <button class="bg-armada-red text-white px-8 py-3 rounded-full w-fit font-bold hover:bg-red-700 transition-all">Kampanyaları Gör</button>
             </div>
             
             <div class="flex flex-col gap-6">
-                <a href="#sinema" class="flex-1 rounded-[2rem] p-8 bg-white border border-slate-100 flex flex-col justify-between hover:shadow-xl transition-all">
-                    <i class="fa-solid fa-film text-2xl text-blue-950"></i>
-                    <h3 class="text-xl font-bold">Sinema</h3>
+                <a href="#sinema" class="flex-1 rounded-[2rem] p-8 bg-white border border-slate-100 flex flex-col justify-between hover:shadow-lg transition-all shadow-sm">
+                    <i class="fa-solid fa-film text-2xl text-armada-navy"></i>
+                    <h3 class="text-xl font-bold text-armada-navy">Sinema</h3>
                 </a>
-                <a href="#lezzet" class="flex-1 rounded-[2rem] p-8 bg-red-600 text-white flex flex-col justify-between hover:shadow-xl transition-all">
+                <a href="#lezzet" class="flex-1 rounded-[2rem] p-8 bg-armada-red text-white flex flex-col justify-between hover:shadow-lg transition-all shadow-sm">
                     <i class="fa-solid fa-utensils text-2xl"></i>
                     <h3 class="text-xl font-bold">Gastronomi</h3>
                 </a>
             </div>
         </div>
 
-        <!-- LOGO ŞERİDİ (Marquee) -->
+        <!-- LOGO ŞERİDİ -->
         <div class="mt-20 overflow-hidden py-10 border-t border-b border-slate-200">
-            <div class="flex animate-marquee gap-20 whitespace-nowrap opacity-50">
+            <div class="flex animate-marquee gap-20 whitespace-nowrap opacity-60 text-armada-navy">
                 <span class="text-2xl font-bold">ZARA</span>
                 <span class="text-2xl font-bold">BERSHKA</span>
                 <span class="text-2xl font-bold">PULL&BEAR</span>
                 <span class="text-2xl font-bold">STRADIVARIUS</span>
                 <span class="text-2xl font-bold">ZARA</span>
                 <span class="text-2xl font-bold">BERSHKA</span>
-                <span class="text-2xl font-bold">PULL&BEAR</span>
-                <span class="text-2xl font-bold">STRADIVARIUS</span>
             </div>
         </div>
     </main>
-
-    <!-- HEDEF BÖLÜMLERİ (Butonların yönleneceği yerler) -->
-    <section id="magazalar" class="h-96 flex items-center justify-center text-4xl font-bold text-slate-300">Mağazalar Listesi Buraya Gelecek</section>
-
 </body>
 </html>
