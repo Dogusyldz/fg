@@ -1,60 +1,53 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sıla Sak Beauty Center | Konya</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
+        body { background-color: #0a0a0a; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        body {
-            background: linear-gradient(135deg, #1a1a1a 0%, #4a3e35 100%);
-            color: white;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
 </head>
-<body class="min-h-screen p-4 md:p-10">
+<body class="text-white antialiased">
 
-    <!-- HERO SECTION -->
-    <header class="max-w-5xl mx-auto glass p-10 md:p-20 rounded-[3rem] text-center mb-10">
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6">Sıla Sak</h1>
-        <p class="text-lg md:text-xl text-stone-300 italic mb-10">"Parmak uçlarınızdan zarafete açılan kapı."</p>
-        <a href="https://wa.me/905393434615" class="bg-white/10 hover:bg-white/20 px-8 py-3 rounded-full border border-white/30 transition-all font-bold tracking-widest uppercase text-sm">Randevu Al</a>
-    </header>
+    <main class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-auto lg:h-[600px]">
+            
+            <!-- Ana Büyük Kart -->
+            <div class="lg:col-span-2 glass-card rounded-[2rem] p-12 flex flex-col justify-end relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-t from-rose-500/10 to-transparent"></div>
+                <h2 class="text-5xl lg:text-7xl font-bold tracking-tighter mb-4 relative z-10">Sıla Sak<br>Beauty Center</h2>
+                <p class="text-lg text-stone-400 max-w-sm relative z-10">Parmak uçlarınızdan zarafete açılan kapı. Profesyonel dokunuşlarla tanışın.</p>
+            </div>
 
-    <!-- HİZMETLER VE BİLGİ -->
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-        
-        <!-- HİZMETLER -->
-        <section class="glass p-8 rounded-[2rem]">
-            <h2 class="text-2xl font-bold mb-6 border-b border-white/20 pb-4">Uzmanlık Alanlarımız</h2>
-            <ul class="space-y-4 text-stone-200">
-                <li>✨ Protez Tırnak & Kalıcı Oje</li>
-                <li>✨ Altın Oran Kaş Tasarımı</li>
-                <li>✨ İpek Kirpik</li>
-                <li>✨ Cilt Bakımı & Lazer Epilasyon</li>
-            </ul>
-        </section>
+            <!-- Sağ Taraf Kartları -->
+            <div class="flex flex-col gap-6">
+                <!-- Sinema/Bilgi -->
+                <div class="glass-card flex-1 rounded-[2rem] p-8">
+                    <h3 class="text-2xl font-bold mb-2 text-rose-400">Önemli Bilgi</h3>
+                    <p class="text-sm text-stone-400">Randevularımız kapora sistemi ile kesinleşmektedir. 20 dk geç kalındığında kaporanız yanmaktadır.</p>
+                </div>
 
-        <!-- ÖNEMLİ NOT -->
-        <section class="glass p-8 rounded-[2rem]">
-            <h2 class="text-2xl font-bold mb-6 border-b border-white/20 pb-4">Randevu Politikası</h2>
-            <p class="text-stone-300 leading-relaxed text-sm">
-                Sistemimizin düzenini korumak ve zamanınıza saygı duymak adına, randevularımız sadece kapora sistemiyle kesinleşmektedir. 20 dakikayı aşan gecikmelerde kaporanız yanmaktadır. Anlayışınız için teşekkür ederiz.
-            </p>
-        </section>
-    </div>
+                <!-- Gastronomi/Hizmetler -->
+                <div class="glass-card flex-1 rounded-[2rem] p-8">
+                    <h3 class="text-2xl font-bold mb-2">Hizmetler</h3>
+                    <ul class="text-sm text-stone-400 space-y-2">
+                        <li>• Protez Tırnak</li>
+                        <li>• Kalıcı Oje</li>
+                        <li>• İpek Kirpik</li>
+                    </ul>
+                </div>
+            </div>
 
-    <!-- İLETİŞİM -->
-    <footer class="max-w-5xl mx-auto mt-6 text-center text-stone-500 text-xs py-10">
-        Konya / Ereğli | 0539 343 46 15
-    </footer>
+        </div>
+    </main>
 
 </body>
 </html>
