@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ulgen Beauty Center | Eskişehir</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -25,29 +24,22 @@
         .glass-nav { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
         .glass-card { background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.8); }
         .glass-form { background: rgba(232, 92, 141, 0.9); backdrop-filter: blur(10px); }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .marquee { display: flex; width: 200%; animation: scroll 20s linear infinite; }
     </style>
 </head>
 <body class="text-stone-800">
 
-    <!-- NAVBAR: Sosyal ikonlar buraya alındı -->
+    <!-- NAVBAR -->
     <nav class="glass-nav sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-8 py-3 flex justify-between items-center">
+        <div class="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
             <div class="font-bold text-xl tracking-tight">
                 <span class="text-ulgenGold">ULGEN</span><span class="text-ulgenPink"> BEAUTY</span>
             </div>
-            
-            <div class="flex items-center gap-6">
-                <!-- Sosyal İkonlar -->
-                <div class="hidden md:flex gap-4 text-stone-500">
-                    <a href="#" class="hover:text-ulgenPink transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                    <a href="#" class="hover:text-ulgenPink transition"><i data-lucide="tiktok" class="w-5 h-5"></i></a>
-                </div>
-                <!-- Menü Linkleri -->
-                <div class="hidden md:flex gap-6 items-center text-sm font-bold">
-                    <a href="#hakkimizda" class="hover:text-ulgenPink transition">Biz Kimiz</a>
-                    <a href="#fiyatlar" class="hover:text-ulgenPink transition">Fiyatlar</a>
-                </div>
-                <a href="#randevu" class="bg-ulgenPink text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-ulgenDark transition shadow-lg">Randevu Al</a>
+            <div class="flex gap-6 items-center text-sm font-bold">
+                <a href="#hakkimizda" class="hover:text-ulgenPink transition">Biz Kimiz</a>
+                <a href="#fiyatlar" class="hover:text-ulgenPink transition">Fiyatlarımız</a>
+                <a href="#randevu" class="bg-ulgenPink text-white px-6 py-2 rounded-full hover:bg-ulgenDark transition shadow-lg">Randevu Al</a>
             </div>
         </div>
     </nav>
@@ -59,11 +51,11 @@
         <a href="#randevu" class="inline-block bg-stone-900 text-white px-10 py-4 rounded-full font-bold hover:bg-ulgenPink transition shadow-xl">Hemen Randevu Oluştur</a>
     </header>
 
-    <!-- HAKKIMIZDA -->
+    <!-- HAKKIMIZDA / BİZ KİMİZ -->
     <section id="hakkimizda" class="max-w-4xl mx-auto px-8 py-10 text-center">
         <h2 class="text-3xl font-bold mb-8">Biz Kimiz?</h2>
         <div class="glass-card p-10 rounded-3xl shadow-sm text-stone-600 leading-relaxed text-lg">
-            <p>Eskişehir'in kalbinde yer alan <strong class="text-ulgenPink">Ulgen Beauty Center</strong> olarak, güzelliğinize değer katmak için buradayız. Alanında uzman kadromuz ve en yeni teknolojilerimizle size en iyi deneyimi sunmayı hedefliyoruz.</p>
+            <p>Eskişehir'in kalbinde yer alan <strong class="text-ulgenPink">Ulgen Beauty Center</strong> olarak, güzelliğinize değer katmak için buradayız. Alanında uzman kadromuz, en yeni teknolojilerimiz ve yüksek hijyen standartlarımızla; lazer epilasyon, cilt bakımı ve profesyonel tırnak sanatında size en iyi deneyimi sunmayı hedefliyoruz. Kendinizi özel ve yenilenmiş hissetmeniz için tasarlandık.</p>
         </div>
     </section>
 
@@ -86,7 +78,15 @@
         </div>
     </section>
 
-    <!-- RANDEVU -->
+    <!-- MARKA ŞERİDİ -->
+    <div class="py-12 overflow-hidden border-y border-pink-100 my-10 bg-white/30">
+        <div class="marquee gap-16 items-center text-stone-400 font-bold tracking-widest text-lg">
+            <span>ESTÉE LAUDER</span><span>SEPHORA</span><span class="text-ulgenPink">ULGEN BEAUTY</span><span>MAC</span><span>NYX</span>
+            <span>ESTÉE LAUDER</span><span>SEPHORA</span><span class="text-ulgenPink">ULGEN BEAUTY</span><span>MAC</span><span>NYX</span>
+        </div>
+    </div>
+
+    <!-- RANDEVU FORMU -->
     <section id="randevu" class="max-w-2xl mx-auto px-8 py-20">
         <div class="glass-form text-white p-10 rounded-3xl shadow-2xl">
             <h3 class="text-2xl font-bold mb-6 text-center">Randevu Oluştur</h3>
@@ -105,13 +105,22 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-12 border-t border-pink-100 bg-white/50 text-center">
-        <p class="text-stone-400 text-xs">© 2026 Ulgen Beauty Center. Tüm hakları saklıdır.</p>
+    <footer class="py-12 border-t border-pink-100 bg-white/50">
+        <div class="max-w-4xl mx-auto px-8 text-center">
+            <div class="font-bold text-xl mb-4">
+                <span class="text-ulgenGold">ULGEN</span><span class="text-ulgenPink"> BEAUTY</span>
+            </div>
+            <p class="text-stone-500 text-sm mb-6">Eskişehir'in Kalbinde Güzellik Merkezi</p>
+            <div class="flex justify-center gap-6 text-stone-400 text-sm font-medium">
+                <a href="#hakkimizda" class="hover:text-ulgenPink transition">Hakkımızda</a>
+                <a href="#" class="hover:text-ulgenPink transition">Gizlilik Politikası</a>
+                <a href="#" class="hover:text-ulgenPink transition">Adres Bilgisi</a>
+            </div>
+            <p class="mt-8 text-stone-400 text-xs">© 2026 Ulgen Beauty Center. Tüm hakları saklıdır.</p>
+        </div>
     </footer>
 
     <script>
-        lucide.createIcons();
-
         function gonder() {
             const isim = document.getElementById('isim').value || "Değerli Müşteri";
             const hizmet = document.getElementById('hizmet').value;
