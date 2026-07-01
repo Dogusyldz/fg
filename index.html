@@ -3,54 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sıla Sak Beauty Center | Konya Ereğli</title>
+    <title>Sıla Sak Beauty Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        .font-heading { font-family: 'Playfair Display', serif; }
-        .font-body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
-        .glass-btn { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.4); }
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .animate-marquee { animation: marquee 30s linear infinite; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1d1d1f; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.1); }
     </style>
 </head>
-<body class="bg-stone-100 text-stone-800 font-body">
+<body>
 
     <!-- NAVBAR -->
-    <nav class="max-w-6xl mx-auto p-8 flex justify-between items-center">
-        <div class="leading-none text-center">
-            <h1 class="text-xl font-bold tracking-widest uppercase">Sıla Sak</h1>
-            <span class="text-rose-400 text-xs tracking-[0.2em] uppercase font-semibold">Beauty</span>
+    <nav class="glass sticky top-0 z-50 py-4 px-8 text-sm">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <span class="font-semibold tracking-tight">Sıla Sak</span>
+            <div class="flex gap-8 text-stone-500">
+                <a href="#hizmetler" class="hover:text-black transition">Hizmetler</a>
+                <a href="https://wa.me/905393434615" class="text-blue-600 hover:underline">Randevu Al</a>
+            </div>
         </div>
-        <a href="https://wa.me/905393434615" class="glass-btn px-6 py-2 rounded-full text-xs font-bold hover:bg-rose-400 hover:text-white transition">RANDEVU AL</a>
     </nav>
 
     <!-- HERO -->
-    <header class="max-w-6xl mx-auto px-8 py-10">
-        <div class="glass p-12 rounded-[2rem] text-center shadow-lg">
-            <h2 class="font-heading text-5xl mb-6">Konya Ereğli'de Zarafetin Adresi</h2>
-            <!-- YENİ SLOGAN STİLİ -->
-            <p class="font-heading italic text-2xl max-w-lg mx-auto text-rose-500 mb-8">"Ruhunuzun ışıltısını ellerinize taşıyoruz."</p>
-            <a href="https://wa.me/905393434615" class="inline-block glass-btn px-8 py-4 rounded-full font-bold hover:bg-rose-400 hover:text-white transition">WhatsApp'tan İletişime Geç</a>
-        </div>
+    <header class="py-24 px-8 text-center">
+        <h1 class="text-5xl md:text-7xl font-semibold tracking-tighter mb-4">Sıla Sak</h1>
+        <p class="text-xl md:text-2xl text-stone-500 font-light mb-8 italic">Zarafetin en yalın hali.</p>
+        <a href="https://wa.me/905393434615" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition">İletişime Geç</a>
     </header>
 
-    <!-- HİZMET ŞERİDİ -->
-    <section class="py-12 overflow-hidden bg-rose-50/50 border-y border-rose-100">
-        <div class="flex animate-marquee gap-20 whitespace-nowrap text-rose-500 font-bold tracking-widest uppercase text-xl md:text-2xl">
-            <span>Protez Tırnak</span> <span>İpek Kirpik</span> <span>Kalıcı Oje</span> <span>Kalıcı Makyaj</span> <span>Cilt Bakım</span> <span>Lazer Epilasyon</span> 
-            <span>Protez Tırnak</span> <span>İpek Kirpik</span> <span>Kalıcı Oje</span> <span>Kalıcı Makyaj</span> <span>Cilt Bakım</span> <span>Lazer Epilasyon</span>
+    <!-- HİZMETLER -->
+    <section id="hizmetler" class="max-w-4xl mx-auto px-8 py-20">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="space-y-2">
+                <h3 class="text-2xl font-semibold">Tırnak Sanatı</h3>
+                <p class="text-stone-500 font-light">Protez tırnak ve kalıcı oje uygulamalarıyla ellerinizde minimal dokunuşlar.</p>
+            </div>
+            <div class="space-y-2">
+                <h3 class="text-2xl font-semibold">Bakış Estetiği</h3>
+                <p class="text-stone-500 font-light">İpek kirpik ve kaş tasarımı ile doğal ve etkileyici bakışlar.</p>
+            </div>
         </div>
     </section>
 
-    <!-- KAPORA BİLGİLENDİRMESİ -->
-    <section class="max-w-6xl mx-auto px-8 py-10">
-        <div class="glass p-8 rounded-[2rem] shadow-sm text-center border-rose-100">
-            <h4 class="font-bold text-rose-500 mb-4">Önemli Bilgilendirme</h4>
-            <p class="text-sm text-stone-600">Randevularımız sadece kapora sistemi ile alınmaktadır. Randevuya gelinmediği veya 20 dk geç kalındığı takdirde kaporanız yanmaktadır.</p>
-        </div>
-    </section>
+    <!-- FOOTER -->
+    <footer class="py-20 text-center text-xs text-stone-400">
+        <p>Konya Ereğli | Randevular kapora sistemiyle kesinleşmektedir.</p>
+    </footer>
 
 </body>
 </html>
