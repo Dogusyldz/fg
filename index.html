@@ -3,62 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sıla Sak Beauty Center</title>
+    <title>Sıla Sak Beauty Center | Konya Ereğli</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .hero-bg {
-            background-image: url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-        }
+        .font-heading { font-family: 'Playfair Display', serif; }
+        .font-body { font-family: 'Plus Jakarta Sans', sans-serif; }
     </style>
 </head>
-<body class="bg-stone-900 text-white font-sans">
+<body class="bg-stone-50 text-stone-800 font-body">
 
-    <!-- HERO SECTION -->
-    <header class="hero-bg min-h-[600px] flex items-center justify-center p-8 relative">
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="glass p-10 md:p-16 rounded-[3rem] text-center max-w-3xl relative z-10">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tighter">Sıla Sak</h1>
-            <p class="text-xl text-stone-200 mb-8 italic">"Konya Ereğli'nin en şık dokunuşu."</p>
-            <a href="https://wa.me/905393434615" class="bg-amber-600 hover:bg-amber-700 px-10 py-4 rounded-full font-bold transition-all shadow-lg">RANDEVU OLUŞTUR</a>
+    <!-- NAVBAR -->
+    <nav class="max-w-6xl mx-auto p-8 flex justify-between items-center">
+        <h1 class="text-xl font-bold tracking-widest uppercase">Sıla Sak <span class="text-rose-400">Beauty</span></h1>
+        <a href="https://wa.me/905393434615" class="bg-stone-900 text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-rose-400 transition">RANDEVU AL</a>
+    </nav>
+
+    <!-- HERO -->
+    <header class="max-w-6xl mx-auto px-8 py-10">
+        <div class="bg-rose-50 p-12 rounded-[2rem] text-center">
+            <h2 class="font-heading text-5xl mb-6">Konya Ereğli'de Zarafetin Adresi</h2>
+            <p class="max-w-lg mx-auto text-stone-600 mb-8">Profesyonel tırnak sanatı, kalıcı makyaj ve güzellik uygulamalarıyla kendinizi özel hissedin.</p>
+            <a href="https://wa.me/905393434615" class="inline-block bg-rose-400 text-white px-8 py-4 rounded-full font-bold hover:bg-rose-500 transition">WhatsApp'tan İletişime Geç</a>
         </div>
     </header>
 
     <!-- HİZMETLER -->
-    <section class="max-w-6xl mx-auto px-8 py-20">
-        <div class="grid md:grid-cols-3 gap-6">
-            <!-- Kart 1 -->
-            <div class="glass p-8 rounded-[2rem] hover:bg-white/10 transition-all">
-                <div class="text-4xl mb-4">💅</div>
-                <h3 class="text-2xl font-bold mb-2">Tırnak Sanatı</h3>
-                <p class="text-stone-400">Protez tırnak ve kalıcı oje ile kusursuz tırnaklar.</p>
+    <section class="max-w-6xl mx-auto px-8 py-10">
+        <h3 class="text-sm font-bold text-stone-400 mb-10 text-center uppercase tracking-widest">Uygulamalarımız</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="p-6 bg-white rounded-2xl border border-stone-100 shadow-sm">
+                <h4 class="font-bold mb-2">Protez Tırnak</h4>
             </div>
-            <!-- Kart 2 -->
-            <div class="glass p-8 rounded-[2rem] hover:bg-white/10 transition-all">
-                <div class="text-4xl mb-4">👁️</div>
-                <h3 class="text-2xl font-bold mb-2">Bakış Estetiği</h3>
-                <p class="text-stone-400">İpek kirpik ve altın oran kaş tasarımı.</p>
+            <div class="p-6 bg-white rounded-2xl border border-stone-100 shadow-sm">
+                <h4 class="font-bold mb-2">Kalıcı Oje</h4>
             </div>
-            <!-- Kart 3 -->
-            <div class="glass p-8 rounded-[2rem] hover:bg-white/10 transition-all">
-                <div class="text-4xl mb-4">✨</div>
-                <h3 class="text-2xl font-bold mb-2">Cilt & Bakım</h3>
-                <p class="text-stone-400">Lazer epilasyon ve profesyonel cilt bakımı.</p>
+            <div class="p-6 bg-white rounded-2xl border border-stone-100 shadow-sm">
+                <h4 class="font-bold mb-2">İpek Kirpik</h4>
+            </div>
+            <div class="p-6 bg-white rounded-2xl border border-stone-100 shadow-sm">
+                <h4 class="font-bold mb-2">Kaş Tasarımı</h4>
             </div>
         </div>
     </section>
 
-    <!-- BİLGİLENDİRME -->
-    <footer class="max-w-4xl mx-auto p-10 mb-20 bg-amber-900/20 glass rounded-[2rem] text-center border-amber-500/20">
-        <h4 class="text-amber-500 font-bold mb-3 uppercase tracking-widest text-sm">Politikamız</h4>
-        <p class="text-stone-300">Randevularımız kapora sistemi ile alınmaktadır. Randevu saatine 20 dk geç kalındığında kaporanız yanmaktadır. Anlayışınız için teşekkür ederiz.</p>
-    </footer>
+    <!-- KAPORA BİLGİLENDİRMESİ (image_11.png ve image_12.png referanslı) -->
+    <section class="max-w-6xl mx-auto px-8 py-10">
+        <div class="bg-white p-8 rounded-[2rem] border border-rose-100 shadow-sm text-center">
+            <h4 class="font-bold text-rose-500 mb-4">Önemli Bilgilendirme</h4>
+            <p class="text-sm text-stone-600">Randevularımız sadece kapora sistemi ile alınmaktadır. Randevuya gelinmediği veya 20 dk geç kalındığı takdirde kaporanız yanmaktadır.</p>
+        </div>
+    </section>
 
 </body>
 </html>
