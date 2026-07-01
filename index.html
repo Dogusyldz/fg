@@ -22,60 +22,60 @@
         .bento-card:hover { transform: scale(0.98); }
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .animate-marquee { animation: marquee 25s linear infinite; }
-        section { scroll-margin-top: 100px; }
     </style>
 </head>
-<body class="bg-armada-light text-slate-800">
+<body class="bg-armada-light text-slate-800 antialiased">
 
-    <!-- NAVBAR -->
+    <!-- ULTRA MODERN NAVBAR -->
     <nav class="fixed w-full top-0 z-[100] bg-white/70 premium-blur border-b border-black/5">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-            <a href="#" class="text-3xl font-extrabold text-armada-navy">ARMADA<span class="text-armada-red">.</span></a>
-            <div class="hidden lg:flex gap-10 text-[13px] font-semibold text-slate-500">
-                <a href="#magazalar" class="hover:text-armada-navy">MAĞAZALAR</a>
-                <a href="#yemeicme" class="hover:text-armada-navy">YEME & İÇME</a>
-                <a href="#etkinlikler" class="hover:text-armada-navy">ETKİNLİKLER</a>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+            <a href="#" class="text-3xl font-extrabold tracking-tighter text-armada-navy">
+                ARMADA<span class="text-armada-red">.</span>
+            </a>
+            <div class="hidden lg:flex gap-10 text-[13px] font-semibold tracking-[0.15em] text-slate-500">
+                <a href="#magazalar" class="hover:text-armada-navy transition-colors">MAĞAZALAR</a>
+                <a href="#yemeicme" class="hover:text-armada-navy transition-colors">YEME & İÇME</a>
+                <a href="#etkinlikler" class="hover:text-armada-navy transition-colors">ETKİNLİKLER</a>
             </div>
-            <a href="#kampanyalar" class="bg-armada-navy text-white px-7 py-3.5 rounded-full text-xs font-bold">ZİYARET PLANLA</a>
+            <a href="#kampanyalar" class="hidden md:flex items-center gap-3 bg-armada-navy text-white px-7 py-3.5 rounded-full text-xs font-bold hover:bg-slate-800 transition-colors">
+                <span>ZİYARET PLANLA</span>
+            </a>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 pt-36">
-        <!-- BENTO GRID -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-auto">
-            <div class="lg:col-span-2 bento-card rounded-[2rem] bg-armada-navy p-14 flex flex-col justify-end text-white h-[500px]">
-                <h2 class="text-6xl font-bold mb-4">Armada'da<br>Yaz İndirimleri.</h2>
-                <p class="text-lg opacity-80 mb-8 max-w-sm">Tüm dünya markalarında %50'ye varan sezon sonu indirimleri seni bekliyor.</p>
-                <a href="#kampanyalar" class="bg-armada-red px-8 py-3 rounded-full w-fit font-bold">Detayları İncele</a>
+    <!-- HERO ALANI -->
+    <main class="max-w-7xl mx-auto px-6 lg:px-12 pt-36 pb-10">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-auto lg:h-[600px]">
+            <div class="lg:col-span-2 bento-card relative rounded-[2rem] overflow-hidden bg-slate-900 group cursor-pointer shadow-sm">
+                <div class="absolute inset-0 bg-gradient-to-tr from-armada-navy via-slate-800 to-transparent z-10 opacity-90 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay group-hover:scale-105 transition-transform duration-700">
+                <div class="relative z-20 h-full p-10 lg:p-14 flex flex-col justify-end text-white">
+                    <span class="border border-white/30 rounded-full px-4 py-1.5 text-[10px] font-bold tracking-widest uppercase w-fit mb-6 backdrop-blur-sm">Yeni Sezon</span>
+                    <h2 class="text-5xl lg:text-7xl font-bold tracking-tighter leading-[1.1] mb-4">
+                        Yazın<br>Ritmini<br>Hisset.
+                    </h2>
+                </div>
             </div>
+
             <div class="flex flex-col gap-6">
-                <a href="#sinema" class="flex-1 bento-card p-8 bg-white border border-slate-100 rounded-[2rem]">
+                <div class="flex-1 bento-card p-8 bg-white border border-slate-100 shadow-sm rounded-[2rem] cursor-pointer">
                     <i class="fa-solid fa-film text-2xl text-armada-navy mb-4"></i>
                     <h3 class="text-2xl font-bold text-armada-navy">Cinemaximum</h3>
-                </a>
-                <a href="#yemeicme" class="flex-1 bento-card p-8 bg-armada-navy text-white rounded-[2rem]">
+                </div>
+                <div class="flex-1 bento-card p-8 bg-armada-navy text-white rounded-[2rem] cursor-pointer">
                     <i class="fa-solid fa-utensils text-2xl mb-4"></i>
                     <h3 class="text-2xl font-bold">Lezzet Noktaları</h3>
-                </a>
+                </div>
             </div>
         </div>
 
-        <!-- İÇERİK BÖLÜMLERİ -->
-        <section id="magazalar" class="py-20">
-            <h2 class="text-4xl font-bold mb-10 text-armada-navy">Mağazalarımız</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="p-6 bg-white rounded-2xl shadow-sm">Zara</div>
-                <div class="p-6 bg-white rounded-2xl shadow-sm">Bershka</div>
-                <div class="p-6 bg-white rounded-2xl shadow-sm">Pull&Bear</div>
-                <div class="p-6 bg-white rounded-2xl shadow-sm">Massimo Dutti</div>
+        <!-- MARKA ŞERİDİ -->
+        <div class="mt-12 overflow-hidden py-10 border-y border-black/5">
+            <div class="flex animate-marquee gap-20 whitespace-nowrap opacity-40 font-bold text-2xl tracking-tighter text-slate-800">
+                <span>ZARA</span> <span>BERSHKA</span> <span>PULL&BEAR</span> <span>STRADIVARIUS</span> <span>MASSIMO DUTTI</span> <span>OYSHO</span>
+                <span>ZARA</span> <span>BERSHKA</span> <span>PULL&BEAR</span> <span>STRADIVARIUS</span> <span>MASSIMO DUTTI</span> <span>OYSHO</span>
             </div>
-        </section>
-
-        <section id="etkinlikler" class="py-20">
-            <h2 class="text-4xl font-bold mb-10 text-armada-navy">Etkinlikler</h2>
-            <p class="text-lg">Bu hafta Armada'da canlı müzik dinletileri ve imza günleri sizi bekliyor.</p>
-        </section>
+        </div>
     </main>
-
 </body>
 </html>
