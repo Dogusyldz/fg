@@ -1,46 +1,73 @@
-<!-- ETKİNLİKLER BÖLÜMÜ -->
-<section id="etkinlikler" class="py-20">
-    <h2 class="text-4xl font-bold mb-10 text-armada-navy">ETKİNLİKLER</h2>
-    <div class="bento-card bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
-        <h3 class="text-xl font-bold mb-4">Armada Alışveriş Merkezi Ankara Nato Zirvesi Hakkında Bilgilendirme</h3>
-        <p class="text-slate-600 mb-6">Ankara'da 07-08 Temmuz 2026 tarihlerinde gerçekleştirilecek 36. NATO Zirvesi süresince, Armada Alışveriş Merkezi olarak ziyaretçilerimizi olağan çalışma saatlerimiz içerisinde ağırlamaya ve kesintisiz hizmet sunmaya devam edeceğiz.</p>
-        <a href="#" class="text-armada-red font-bold underline">Devamı</a>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: { colors: { armada: { navy: '#002f6c', red: '#e30613' } } }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .premium-blur { backdrop-filter: saturate(180%) blur(20px); }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-marquee { animation: marquee 20s linear infinite; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800">
 
-<!-- FIRSATLAR BÖLÜMÜ -->
-<section id="firsatlar" class="py-20">
-    <h2 class="text-4xl font-bold mb-10 text-armada-navy">FIRSATLAR</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Kampanya 1 -->
-        <div class="bento-card bg-white p-6 rounded-[2rem] shadow-sm">
-            <img src="image_2.png" alt="Öğrenci Sinema Kampanyası" class="rounded-2xl mb-4">
-            <h3 class="text-lg font-bold">Öğrenci Sinema Kampanyası</h3>
-            <p class="text-sm text-slate-500">Armada'dan her pazar öğrenci sinema biletine yemek kuponu hediye!</p>
+    <nav class="fixed w-full top-0 z-[100] bg-white/80 premium-blur border-b border-armada-navy/10">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#" class="text-3xl font-extrabold tracking-tighter text-armada-navy">ARMADA<span class="text-armada-red">.</span></a>
+            <div class="hidden lg:flex gap-10 text-[13px] font-semibold tracking-[0.15em] text-slate-500">
+                <a href="#etkinlikler" class="hover:text-armada-navy">ETKİNLİKLER</a>
+                <a href="#firsatlar" class="hover:text-armada-navy">FIRSATLAR</a>
+            </div>
+            <button class="bg-armada-navy text-white px-8 py-3 rounded-full text-xs font-bold hover:bg-armada-red">ZİYARET ET</button>
         </div>
-        <!-- Kampanya 2 -->
-        <div class="bento-card bg-white p-6 rounded-[2rem] shadow-sm">
-            <img src="image_4.png" alt="Marks & Spencer" class="rounded-2xl mb-4">
-            <h3 class="text-lg font-bold">Marks & Spencer</h3>
-            <p class="text-sm text-slate-500">Sezon sonu indirimlerinde %50'ye varan fırsatlar.</p>
-        </div>
-        <!-- Kampanya 3 -->
-        <div class="bento-card bg-white p-6 rounded-[2rem] shadow-sm">
-            <img src="image_5.png" alt="Dagi" class="rounded-2xl mb-4">
-            <h3 class="text-lg font-bold">Dagi</h3>
-            <p class="text-sm text-slate-500">Seçili ürünlerde NET %50 indirim.</p>
-        </div>
-    </div>
-</section>
+    </nav>
 
-<!-- SİNEMA BÖLÜMÜ -->
-<section id="sinema" class="py-20 bg-armada-navy text-white rounded-[2rem] px-10">
-    <h2 class="text-4xl font-bold mb-10">SİNEMA</h2>
-    <div class="grid lg:grid-cols-2 gap-10 items-center">
-        <img src="image_6.png" alt="Sinema Salonu" class="rounded-[2rem] shadow-2xl">
-        <div>
-            <p class="text-lg mb-6 leading-relaxed">11 Salon, 1300 kişi kapasiteli Art House ve Gold Class Salonları ile Sinema Armada 1 Kat 4'de hizmetinizde.</p>
-            <a href="#" class="bg-armada-red px-8 py-4 rounded-full font-bold inline-block hover:bg-red-700 transition">TÜM FİLMLER & SEANSLAR</a>
-        </div>
-    </div>
-</section>
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-20">
+        
+        <section id="etkinlikler" class="mb-12">
+            <h2 class="text-2xl font-bold text-armada-navy mb-6">ETKİNLİKLER & DUYURULAR</h2>
+            <div class="bg-white p-8 rounded-[2rem] border-l-4 border-armada-red shadow-sm card-hover">
+                <h3 class="font-bold text-xl mb-3">Armada Alışveriş Merkezi Ankara Nato Zirvesi Hakkında Bilgilendirme</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">Ankara'da 07-08 Temmuz 2026 tarihlerinde gerçekleştirilecek 36. NATO Zirvesi süresince, Armada Alışveriş Merkezi olağan çalışma saatlerinde hizmet vermeye devam edecektir.</p>
+                <a href="#" class="text-armada-red font-bold text-sm">Devamı →</a>
+            </div>
+        </section>
+
+        <section id="firsatlar" class="mb-16">
+            <h2 class="text-2xl font-bold text-armada-navy mb-6">FIRSATLAR</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-[2rem] shadow-sm card-hover">
+                    <h3 class="font-bold mb-2">Öğrenci Sinema Kampanyası</h3>
+                    <p class="text-xs text-slate-500 mb-4">Armada'dan her pazar öğrenci sinema biletine yemek kuponu hediye!</p>
+                </div>
+                <div class="bg-white p-6 rounded-[2rem] shadow-sm card-hover">
+                    <h3 class="font-bold mb-2">Marks & Spencer</h3>
+                    <p class="text-xs text-slate-500 mb-4">Sezon sonu indirimlerinde %50'ye varan fırsatlar.</p>
+                </div>
+                <div class="bg-white p-6 rounded-[2rem] shadow-sm card-hover">
+                    <h3 class="font-bold mb-2">Dagi</h3>
+                    <p class="text-xs text-slate-500 mb-4">Seçili ürünlerde NET %50 indirim.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sinema" class="bg-armada-navy text-white p-10 rounded-[2rem] card-hover">
+            <h2 class="text-2xl font-bold mb-4">SİNEMA</h2>
+            <p class="text-sm opacity-80 mb-6 max-w-lg">11 Salon, 1300 kişi kapasiteli Art House ve Gold Class Salonları ile Sinema Armada 1 Kat 4'de hizmetinizde.</p>
+            <a href="#" class="bg-armada-red px-6 py-3 rounded-full text-xs font-bold uppercase">Tüm Filmler & Seanslar</a>
+        </section>
+
+    </main>
+</body>
+</html>
