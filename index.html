@@ -3,38 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sıla Sak Beauty Center</title>
+    <title>Sıla Sak Beauty Center | Konya</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        dark: '#1a1a1a',    /* Modern Antrasit */
-                        cream: '#fdfbf7',  /* Şık Krem */
-                        accent: '#d4b499'  /* Modern Gül Kurusu/Nude */
-                    }
-                }
-            }
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-    </script>
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #4a3e35 100%);
+            color: white;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
 </head>
-<body class="bg-cream text-dark">
+<body class="min-h-screen p-4 md:p-10">
 
     <!-- HERO SECTION -->
-    <header class="min-h-screen flex flex-col items-center justify-center p-8 text-center">
-        <h1 class="text-6xl md:text-8xl font-serif mb-6 tracking-tighter">Sıla Sak</h1>
-        <p class="text-xl md:text-2xl mb-10 text-stone-500 italic">"Parmak uçlarınızdan zarafete açılan kapı."</p>
-        <a href="https://wa.me/905393434615" class="border-2 border-dark px-10 py-4 font-bold uppercase tracking-[0.2em] hover:bg-dark hover:text-white transition-all">Randevu Oluştur</a>
+    <header class="max-w-5xl mx-auto glass p-10 md:p-20 rounded-[3rem] text-center mb-10">
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6">Sıla Sak</h1>
+        <p class="text-lg md:text-xl text-stone-300 italic mb-10">"Parmak uçlarınızdan zarafete açılan kapı."</p>
+        <a href="https://wa.me/905393434615" class="bg-white/10 hover:bg-white/20 px-8 py-3 rounded-full border border-white/30 transition-all font-bold tracking-widest uppercase text-sm">Randevu Al</a>
     </header>
 
-    <!-- BİLGİLENDİRME KARTI -->
-    <section class="max-w-2xl mx-auto px-8 py-20">
-        <div class="bg-dark text-cream p-10 rounded-sm">
-            <h4 class="font-bold text-accent mb-4 tracking-widest uppercase text-sm">Önemli Hatırlatma</h4>
-            <p class="text-lg leading-relaxed">Sistemimizin düzenini korumak ve zamanınıza saygı duymak adına, randevularımız sadece kapora sistemiyle kesinleşmektedir. Anlayışınız için teşekkür ederiz.</p>
-        </div>
-    </section>
+    <!-- HİZMETLER VE BİLGİ -->
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+        
+        <!-- HİZMETLER -->
+        <section class="glass p-8 rounded-[2rem]">
+            <h2 class="text-2xl font-bold mb-6 border-b border-white/20 pb-4">Uzmanlık Alanlarımız</h2>
+            <ul class="space-y-4 text-stone-200">
+                <li>✨ Protez Tırnak & Kalıcı Oje</li>
+                <li>✨ Altın Oran Kaş Tasarımı</li>
+                <li>✨ İpek Kirpik</li>
+                <li>✨ Cilt Bakımı & Lazer Epilasyon</li>
+            </ul>
+        </section>
+
+        <!-- ÖNEMLİ NOT -->
+        <section class="glass p-8 rounded-[2rem]">
+            <h2 class="text-2xl font-bold mb-6 border-b border-white/20 pb-4">Randevu Politikası</h2>
+            <p class="text-stone-300 leading-relaxed text-sm">
+                Sistemimizin düzenini korumak ve zamanınıza saygı duymak adına, randevularımız sadece kapora sistemiyle kesinleşmektedir. 20 dakikayı aşan gecikmelerde kaporanız yanmaktadır. Anlayışınız için teşekkür ederiz.
+            </p>
+        </section>
+    </div>
+
+    <!-- İLETİŞİM -->
+    <footer class="max-w-5xl mx-auto mt-6 text-center text-stone-500 text-xs py-10">
+        Konya / Ereğli | 0539 343 46 15
+    </footer>
 
 </body>
 </html>
