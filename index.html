@@ -96,19 +96,30 @@
             </form>
         </div>
     </section>
-    <!-- MARKA ŞERİT BÖLÜMÜ -->
-<section class="w-full bg-white py-10 border-y border-pink-100 overflow-hidden">
-    <div class="max-w-6xl mx-auto px-8">
-        <h3 class="text-center text-sm font-semibold text-ulgenPink mb-8 tracking-widest uppercase">Kullandığımız Seçkin Markalar</h3>
-        <div class="flex flex-wrap justify-center items-center gap-12 grayscale opacity-70">
-            <!-- Marka İsimleri -->
-            <span class="text-xl font-bold text-stone-700">MAC</span>
-            <span class="text-xl font-bold text-stone-700">SEPHORA</span>
-            <span class="text-xl font-bold text-stone-700">ESTÉE LAUDER</span>
-            <span class="text-xl font-bold text-stone-700">MAYBELLINE</span>
-            <span class="text-xl font-bold text-stone-700">NYX</span>
-            <span class="text-xl font-bold text-stone-700">L'ORÉAL</span>
-        </div>
+  <style>
+    @keyframes kaydir {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+    .marka-bant {
+        display: flex;
+        animation: kaydir 15s linear infinite;
+        white-space: nowrap;
+    }
+</style>
+
+<section class="w-full py-8 bg-white overflow-hidden border-y border-pink-50">
+    <div class="marka-bant gap-16 items-center">
+        <span class="text-2xl font-bold text-stone-300">MAC</span>
+        <span class="text-2xl font-bold text-stone-300">SEPHORA</span>
+        <span class="text-2xl font-bold text-stone-300">ESTÉE LAUDER</span>
+        <span class="text-2xl font-bold text-stone-300">MAYBELLINE</span>
+        <span class="text-2xl font-bold text-stone-300">NYX</span>
+        <span class="text-2xl font-bold text-stone-300">L'ORÉAL</span>
+        <span class="text-2xl font-bold text-stone-300">MAC</span>
+        <span class="text-2xl font-bold text-stone-300">SEPHORA</span>
+        <span class="text-2xl font-bold text-stone-300">ESTÉE LAUDER</span>
+        <span class="text-2xl font-bold text-stone-300">MAYBELLINE</span>
     </div>
 </section>
 
