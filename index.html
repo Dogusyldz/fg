@@ -1,38 +1,60 @@
-<!-- OTOMATİK KAYAN FIRSATLAR KATALOĞU -->
-<section class="py-16">
-    <h2 class="text-2xl font-bold text-armada-navy mb-8 text-center">GÜNCEL FIRSATLAR KATALOĞU</h2>
-    <div class="overflow-hidden relative">
-        <div class="flex animate-marquee gap-6">
-            <!-- Fırsat Kartı 1 -->
-            <div class="min-w-[300px] bento-card bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm">
-                <div class="text-armada-red font-bold text-sm mb-2">SİNEMA</div>
-                <h3 class="font-bold text-lg mb-1">Öğrenci Kampanyası</h3>
-                <p class="text-xs text-slate-500">Her Pazar sinema biletine yemek kuponu hediye.</p>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElenaVip Güzellik Salonu Van</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- HEADER -->
+    <nav class="flex justify-between items-center p-8 max-w-6xl mx-auto">
+        <h1 class="text-2xl font-bold tracking-tighter italic text-stone-900">ELENA<span class="text-rose-400">VIP</span></h1>
+        <div class="hidden md:flex gap-8 text-sm font-semibold text-stone-500">
+            <a href="#hizmetler" class="hover:text-rose-400">HİZMETLER</a>
+            <a href="#iletisim" class="hover:text-rose-400">İLETİŞİM</a>
+        </div>
+        <a href="tel:05451484214" class="bg-stone-900 text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-rose-400 transition">RANDEVU AL</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <main class="max-w-6xl mx-auto px-8 py-10">
+        <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-12 rounded-[2rem] shadow-sm border border-stone-100">
+            <div>
+                <span class="text-rose-400 font-bold tracking-widest text-xs uppercase">2023 ÖDÜLLÜ SALON</span>
+                <h2 class="text-5xl font-bold mt-4 mb-6 leading-tight">Van'ın Güzellik<br>Merkezi</h2>
+                <p class="text-stone-500 mb-8">2023 ödüllü güzellik salonumuzda; profesyonel epilasyon ve cilt bakımı uygulamalarıyla kendinizi özel hissedin.</p>
+                <a href="tel:05451484214" class="bg-rose-400 text-white px-8 py-4 rounded-full font-bold hover:bg-rose-500 transition">Bizi Arayın</a>
             </div>
-            <!-- Fırsat Kartı 2 -->
-            <div class="min-w-[300px] bento-card bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm">
-                <div class="text-armada-navy font-bold text-sm mb-2">MAĞAZA</div>
-                <h3 class="font-bold text-lg mb-1">Marks & Spencer</h3>
-                <p class="text-xs text-slate-500">Sezon sonu indirimlerinde %50'ye varan fırsatlar.</p>
-            </div>
-            <!-- Fırsat Kartı 3 -->
-            <div class="min-w-[300px] bento-card bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm">
-                <div class="text-armada-navy font-bold text-sm mb-2">MAĞAZA</div>
-                <h3 class="font-bold text-lg mb-1">Dagi</h3>
-                <p class="text-xs text-slate-500">Seçili ürünlerde NET %50 indirim başladı.</p>
-            </div>
-            <!-- Fırsat Kartı 4 -->
-            <div class="min-w-[300px] bento-card bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm">
-                <div class="text-armada-navy font-bold text-sm mb-2">MAĞAZA</div>
-                <h3 class="font-bold text-lg mb-1">Network</h3>
-                <p class="text-xs text-slate-500">Büyük Network indirimi: %50 + ek %20 fırsatı.</p>
-            </div>
-            <!-- Döngünün devam etmesi için kartları kopyalıyoruz -->
-            <div class="min-w-[300px] bento-card bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm">
-                <div class="text-armada-red font-bold text-sm mb-2">SİNEMA</div>
-                <h3 class="font-bold text-lg mb-1">Öğrenci Kampanyası</h3>
-                <p class="text-xs text-slate-500">Her Pazar sinema biletine yemek kuponu hediye.</p>
+            <div class="bg-stone-200 h-96 rounded-[2rem] flex items-center justify-center text-stone-400">
+                Salon Görseli
             </div>
         </div>
-    </div>
-</section>
+
+        <!-- HİZMETLER -->
+        <section id="hizmetler" class="py-20">
+            <h3 class="text-sm font-bold text-stone-400 mb-10 text-center">UZMANLIK ALANLARIMIZ</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-8 bg-white rounded-[2rem] border border-stone-100">
+                    <h4 class="font-bold text-xl mb-2">Epilasyon</h4>
+                    <p class="text-sm text-stone-500">Son teknoloji cihazlarla pürüzsüz bir deneyim.</p>
+                </div>
+                <div class="p-8 bg-white rounded-[2rem] border border-stone-100">
+                    <h4 class="font-bold text-xl mb-2">Cilt Bakımı</h4>
+                    <p class="text-sm text-stone-500">Cildinize özel profesyonel dokunuşlar.</p>
+                </div>
+                <div class="p-8 bg-white rounded-[2rem] border border-stone-100">
+                    <h4 class="font-bold text-xl mb-2">İpek Kirpik</h4>
+                    <p class="text-sm text-stone-500">Etkileyici bakışlar için profesyonel uygulama.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
