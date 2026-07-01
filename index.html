@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ulgen Beauty Center | Eskişehir</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ulgenPink: '#e85c8d', // Instagram profilindeki o canlı pembe tonu
+                        ulgenDark: '#d4497a'  // Hover için biraz daha koyu tonu
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #fffafb; color: #4a3f42; }
-        .nav-blur { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
-        .card-glass { background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(244, 114, 182, 0.2); }
-        .bg-pink-custom { background-color: #db2777; }
-        .hover\:bg-pink-dark:hover { background-color: #be185d; }
+        body { font-family: 'Inter', sans-serif; background-color: #fff9fb; color: #4a3f42; }
+        .nav-blur { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px); }
+        .card-glass { background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(232, 92, 141, 0.2); }
     </style>
 </head>
 <body>
@@ -19,58 +29,59 @@
     <!-- NAVBAR -->
     <nav class="nav-blur sticky top-0 z-50 border-b border-pink-100">
         <div class="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
-            <div class="font-bold tracking-tight text-lg text-pink-700">Ulgen Beauty</div>
+            <div class="font-bold tracking-tight text-xl text-ulgenPink">ULGEN BEAUTY</div>
             <div class="flex gap-6 text-sm font-medium text-stone-600 items-center">
-                <a href="#hizmetler" class="hover:text-pink-600 transition">Hizmetler</a>
-                <a href="#hizmetler" class="bg-pink-custom text-white px-4 py-2 rounded-full hover:bg-pink-dark transition">Randevu</a>
+                <a href="#hizmetler" class="hover:text-ulgenPink transition">Hizmetler</a>
+                <a href="#hizmetler" class="bg-ulgenPink text-white px-5 py-2 rounded-full hover:bg-ulgenDark transition shadow-md">Randevu</a>
             </div>
         </div>
     </nav>
 
     <!-- HERO -->
     <header class="py-24 text-center px-8">
-        <h1 class="text-6xl font-semibold tracking-tighter mb-6 text-pink-900">Güzelliğinize imza atın.</h1>
-        <p class="text-xl text-stone-500 max-w-xl mx-auto mb-10 font-light">Eskişehir'in profesyonel güzellik merkezi.</p>
-        <a href="#hizmetler" class="bg-pink-custom text-white px-8 py-3 rounded-full hover:bg-pink-dark transition">Randevu Oluştur</a>
+        <h1 class="text-6xl font-semibold tracking-tighter mb-6 text-ulgenPink">Güzelliğinize İmzayı Atın.</h1>
+        <p class="text-xl text-stone-500 max-w-xl mx-auto mb-10 font-light">Eskişehir'in seçkin güzellik merkezi Ulgen Beauty'de profesyonel dokunuşlar.</p>
+        <a href="#hizmetler" class="bg-ulgenPink text-white px-8 py-3 rounded-full hover:bg-ulgenDark transition shadow-lg">Hemen Randevu Oluştur</a>
     </header>
 
-    <!-- HİZMETLER & FİYATLAR -->
+    <!-- HİZMETLER -->
     <section id="hizmetler" class="max-w-4xl mx-auto px-8 py-20">
-        <h2 class="text-3xl font-semibold mb-12 text-center text-pink-900">Uygulamalarımız & Fiyatlar</h2>
+        <h2 class="text-3xl font-semibold mb-12 text-center text-stone-800">Uygulamalarımız & Fiyatlar</h2>
         
         <div class="space-y-4 mb-12">
             <div class="card-glass p-6 rounded-2xl">
                 <details class="group">
                     <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-lg">
                         Lazer & Bölgesel İncelme
-                        <span class="text-sm text-pink-400">Detaylar</span>
+                        <span class="text-sm text-ulgenPink font-semibold">Detaylar</span>
                     </summary>
-                    <p class="text-stone-600 mt-4 font-light border-t pt-4">Lazer Epilasyon: 800 TL | Bölgesel İncelme: 1200 TL</p>
+                    <p class="text-stone-600 mt-4 font-light border-t pt-4">Lazer Epilasyon | Bölgesel İncelme Hizmetleri İçin Bilgi Alın</p>
                 </details>
             </div>
             <div class="card-glass p-6 rounded-2xl">
                 <details class="group">
                     <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-lg">
-                        Bakım & Tırnak
-                        <span class="text-sm text-pink-400">Detaylar</span>
+                        Bakım & Tırnak Sanatı
+                        <span class="text-sm text-ulgenPink font-semibold">Detaylar</span>
                     </summary>
-                    <p class="text-stone-600 mt-4 font-light border-t pt-4">Cilt Bakımı: 900 TL | Protez Tırnak: 750 TL</p>
+                    <p class="text-stone-600 mt-4 font-light border-t pt-4">Protez Tırnak | Cilt Bakımı | İpek Kirpik Uygulamaları</p>
                 </details>
             </div>
         </div>
 
         <!-- FORM -->
-        <div class="bg-pink-custom text-white p-8 rounded-3xl">
+        <div class="bg-ulgenPink text-white p-8 rounded-3xl shadow-xl">
             <h3 class="text-xl font-semibold mb-6">Randevu Başlat</h3>
             <form id="randevuForm" class="grid gap-4">
-                <input type="text" id="isim" placeholder="Adınız Soyadınız" class="p-4 rounded-xl text-black w-full">
-                <select id="hizmet" class="p-4 rounded-xl text-black w-full">
+                <input type="text" id="isim" placeholder="Adınız Soyadınız" class="p-4 rounded-xl text-stone-800 w-full">
+                <select id="hizmet" class="p-4 rounded-xl text-stone-800 w-full">
                     <option>Lazer Epilasyon</option>
                     <option>Bölgesel İncelme</option>
                     <option>Cilt Bakımı</option>
                     <option>Protez Tırnak</option>
+                    <option>İpek Kirpik & Lifting</option>
                 </select>
-                <button type="button" onclick="gonder()" class="bg-white text-pink-700 font-bold py-4 rounded-xl hover:bg-pink-50 transition">
+                <button type="button" onclick="gonder()" class="bg-white text-ulgenPink font-bold py-4 rounded-xl hover:bg-pink-50 transition">
                     WhatsApp'tan Onay Al
                 </button>
             </form>
@@ -78,7 +89,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-10 text-center text-sm text-stone-500 font-light border-t border-pink-100">
+    <footer class="py-10 text-center text-sm text-stone-400 font-light border-t border-pink-50">
         <p>Eskişehir | Ulgen Beauty Center</p>
         <p>© 2026 Tüm Hakları Saklıdır.</p>
     </footer>
@@ -87,7 +98,7 @@
         function gonder() {
             const isim = document.getElementById('isim').value;
             const hizmet = document.getElementById('hizmet').value;
-            const mesaj = `Merhaba, ben ${isim}. ${hizmet} için randevu almak istiyorum.`;
+            const mesaj = `Merhaba, ben ${isim}. ${hizmet} randevusu hakkında bilgi almak istiyorum.`;
             window.open(`https://wa.me/905056162600?text=${encodeURIComponent(mesaj)}`, '_blank');
         }
     </script>
