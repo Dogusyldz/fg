@@ -13,6 +13,14 @@
         .card-glass { background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); }
     </style>
 </head>
+    <script>
+    function gonder() {
+        const isim = document.getElementById('isim').value;
+        const hizmet = document.getElementById('hizmet').value;
+        const mesaj = `Merhaba, ben ${isim}. ${hizmet} için randevu almak istiyorum.`;
+        window.open(`https://wa.me/905393434615?text=${encodeURIComponent(mesaj)}`, '_blank');
+    }
+</script>
 <body>
 
     <!-- NAVBAR -->
