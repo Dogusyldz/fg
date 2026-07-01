@@ -3,44 +3,52 @@
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Ekstra derinlik için özel gölge */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
 </head>
 <body class="bg-slate-50">
 
-    <!-- HEADER -->
-    <header class="sticky top-0 z-[100] bg-white/80 backdrop-blur-lg border-b border-slate-200">
+    <!-- HEADER (Blur Eklendi) -->
+    <header class="sticky top-0 z-[100] bg-white/60 backdrop-blur-xl border-b border-white/20 shadow-lg shadow-slate-200/50">
         <nav class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
             <h1 class="text-2xl font-black tracking-tighter text-blue-900">ARMADA</h1>
             <div class="flex gap-6 text-sm font-bold text-slate-600">
                 <a href="#" class="hover:text-blue-600 transition-colors">Mağazalar</a>
                 <a href="#" class="hover:text-blue-600 transition-colors">Etkinlikler</a>
-                <a href="#" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700">İletişim</a>
+                <a href="#" class="bg-blue-900 text-white px-6 py-2.5 rounded-2xl shadow-lg shadow-blue-900/20 hover:bg-blue-800 transition-all active:scale-95">İletişim</a>
             </div>
         </nav>
     </header>
 
-    <!-- HERO BÖLÜMÜ -->
+    <!-- HERO BÖLÜMÜ (Derin Gölge Eklendi) -->
     <main class="max-w-5xl mx-auto px-6 py-12">
-        <div class="relative rounded-3xl overflow-hidden shadow-2xl h-80 flex items-end p-10 bg-slate-800">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+        <div class="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-blue-200/50 h-80 flex items-end p-10 bg-slate-800">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
             <div class="relative z-10 text-white">
                 <h2 class="text-4xl font-extrabold mb-2">Yaza Özel Fırsatlar</h2>
                 <p class="text-slate-300">Tüm markalarda %50'ye varan indirimler başladı.</p>
             </div>
         </div>
 
-        <!-- HIZLI ERİŞİM KARTLARI -->
+        <!-- HIZLI ERİŞİM KARTLARI (Blur ve Gölge Eklendi) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
+            <div class="glass-card p-8 rounded-3xl shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-all">
                 <i class="fa-solid fa-shop text-blue-600 text-2xl mb-4"></i>
                 <h3 class="font-bold text-lg">Mağazalar</h3>
                 <p class="text-slate-500 text-sm mt-1">Tüm mağaza listesini görüntüleyin.</p>
             </div>
-            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
+            <div class="glass-card p-8 rounded-3xl shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-all">
                 <i class="fa-solid fa-calendar-days text-blue-600 text-2xl mb-4"></i>
                 <h3 class="font-bold text-lg">Etkinlikler</h3>
                 <p class="text-slate-500 text-sm mt-1">Haftalık programı keşfedin.</p>
             </div>
-            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
+            <div class="glass-card p-8 rounded-3xl shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-all">
                 <i class="fa-solid fa-location-dot text-blue-600 text-2xl mb-4"></i>
                 <h3 class="font-bold text-lg">Ulaşım</h3>
                 <p class="text-slate-500 text-sm mt-1">Adres ve otopark bilgileri.</p>
