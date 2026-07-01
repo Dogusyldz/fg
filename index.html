@@ -10,12 +10,19 @@
         .font-heading { font-family: 'Playfair Display', serif; }
         .font-body { font-family: 'Plus Jakarta Sans', sans-serif; }
         
-        /* Blur Efekti */
+        /* Glassmorphism Efekti */
         .glass {
             background: rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Buton için özel glass */
+        .glass-btn {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
     </style>
 </head>
@@ -24,7 +31,8 @@
     <!-- NAVBAR -->
     <nav class="max-w-6xl mx-auto p-8 flex justify-between items-center">
         <h1 class="text-xl font-bold tracking-widest uppercase">Sıla Sak <span class="text-rose-400">Beauty</span></h1>
-        <a href="https://wa.me/905393434615" class="bg-stone-900 text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-rose-400 transition">RANDEVU AL</a>
+        <!-- Buton güncellendi -->
+        <a href="https://wa.me/905461253393" class="glass-btn px-6 py-2 rounded-full text-xs font-bold hover:bg-rose-400 hover:text-white transition">RANDEVU AL</a>
     </nav>
 
     <!-- HERO -->
@@ -32,7 +40,8 @@
         <div class="glass p-12 rounded-[2rem] text-center shadow-lg">
             <h2 class="font-heading text-5xl mb-6">Konya Ereğli'de Zarafetin Adresi</h2>
             <p class="max-w-lg mx-auto text-stone-600 mb-8">Profesyonel tırnak sanatı, kalıcı makyaj ve güzellik uygulamalarıyla kendinizi özel hissedin.</p>
-            <a href="https://wa.me/905393434615" class="inline-block bg-rose-400 text-white px-8 py-4 rounded-full font-bold hover:bg-rose-500 transition">WhatsApp'tan İletişime Geç</a>
+            <!-- Buton güncellendi -->
+            <a href="https://wa.me/905461253393" class="inline-block glass-btn px-8 py-4 rounded-full font-bold hover:bg-rose-400 hover:text-white transition">WhatsApp'tan İletişime Geç</a>
         </div>
     </header>
 
