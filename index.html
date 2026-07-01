@@ -2,72 +2,77 @@
 <html lang="tr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
-                extend: { colors: { armada: { navy: '#002f6c', red: '#e30613' } } }
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: { armada: { navy: '#001b44', red: '#d90416', light: '#f4f6f8' } }
+                }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .premium-blur { backdrop-filter: saturate(180%) blur(20px); }
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .animate-marquee { animation: marquee 20s linear infinite; }
-        .card-hover { transition: all 0.3s ease; }
-        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .bento-card { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .bento-card:hover { transform: scale(0.98); }
     </style>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800">
+<body class="bg-armada-light text-slate-800 antialiased">
 
-    <nav class="fixed w-full top-0 z-[100] bg-white/80 premium-blur border-b border-armada-navy/10">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+    <!-- NAVBAR -->
+    <nav class="fixed w-full top-0 z-[100] bg-white/70 premium-blur border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
             <a href="#" class="text-3xl font-extrabold tracking-tighter text-armada-navy">ARMADA<span class="text-armada-red">.</span></a>
             <div class="hidden lg:flex gap-10 text-[13px] font-semibold tracking-[0.15em] text-slate-500">
-                <a href="#etkinlikler" class="hover:text-armada-navy">ETKİNLİKLER</a>
+                <a href="#duyuru" class="hover:text-armada-navy">DUYURULAR</a>
                 <a href="#firsatlar" class="hover:text-armada-navy">FIRSATLAR</a>
             </div>
-            <button class="bg-armada-navy text-white px-8 py-3 rounded-full text-xs font-bold hover:bg-armada-red">ZİYARET ET</button>
+            <a href="#" class="hidden md:flex items-center gap-3 bg-armada-navy text-white px-7 py-3.5 rounded-full text-xs font-bold hover:bg-slate-800">ZİYARET PLANLA</a>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 pt-32 pb-20">
+    <main class="max-w-7xl mx-auto px-6 lg:px-12 pt-36 pb-20">
         
-        <section id="etkinlikler" class="mb-12">
-            <h2 class="text-2xl font-bold text-armada-navy mb-6">ETKİNLİKLER & DUYURULAR</h2>
-            <div class="bg-white p-8 rounded-[2rem] border-l-4 border-armada-red shadow-sm card-hover">
-                <h3 class="font-bold text-xl mb-3">Armada Alışveriş Merkezi Ankara Nato Zirvesi Hakkında Bilgilendirme</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-4">Ankara'da 07-08 Temmuz 2026 tarihlerinde gerçekleştirilecek 36. NATO Zirvesi süresince, Armada Alışveriş Merkezi olağan çalışma saatlerinde hizmet vermeye devam edecektir.</p>
-                <a href="#" class="text-armada-red font-bold text-sm">Devamı →</a>
+        <!-- ÜST BÖLÜM: NATO ZİRVESİ BİLGİLENDİRMESİ -->
+        <section id="duyuru" class="mb-10 bento-card bg-white p-8 lg:p-10 rounded-[2rem] border-l-8 border-armada-red shadow-sm">
+            <h2 class="text-2xl font-bold text-armada-navy mb-4">NATO Zirvesi Hakkında Bilgilendirme</h2>
+            <p class="text-slate-600 leading-relaxed max-w-3xl">Ankara'da 07-08 Temmuz 2026 tarihlerinde gerçekleştirilecek 36. NATO Zirvesi süresince, Armada Alışveriş Merkezi olağan çalışma saatlerinde kesintisiz hizmet vermeye devam edecektir.</p>
+        </section>
+
+        <!-- BENTO GRID -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-auto lg:h-[600px]">
+            
+            <!-- Kampanya Ana Kart -->
+            <div class="lg:col-span-2 bento-card relative rounded-[2rem] overflow-hidden bg-armada-navy p-10 flex flex-col justify-end text-white">
+                <span class="bg-armada-red px-4 py-1.5 rounded-full text-[10px] font-bold uppercase w-fit mb-4">Kampanya</span>
+                <h2 class="text-4xl lg:text-6xl font-bold tracking-tighter mb-4">Öğrenci Sinema Kampanyası</h2>
+                <p class="text-white/70 max-w-sm mb-6">Her Pazar öğrenci sinema biletine yemek kuponu hediye!</p>
             </div>
-        </section>
 
-        <section id="firsatlar" class="mb-16">
-            <h2 class="text-2xl font-bold text-armada-navy mb-6">FIRSATLAR</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-[2rem] shadow-sm card-hover">
-                    <h3 class="font-bold mb-2">Öğrenci Sinema Kampanyası</h3>
-                    <p class="text-xs text-slate-500 mb-4">Armada'dan her pazar öğrenci sinema biletine yemek kuponu hediye!</p>
+            <!-- Sağ Taraf Kartları -->
+            <div class="flex flex-col gap-6">
+                <!-- Sinema -->
+                <div class="flex-1 bento-card p-8 bg-white border border-slate-100 rounded-[2rem] shadow-sm">
+                    <h3 class="text-xl font-bold text-armada-navy mb-2">Sinema Armada</h3>
+                    <p class="text-sm text-slate-500 mb-4">11 Salon, 1300 kişi kapasiteli Art House ve Gold Class.</p>
+                    <a href="#" class="text-armada-red font-bold text-xs underline">TÜM FİLMLER & SEANSLAR</a>
                 </div>
-                <div class="bg-white p-6 rounded-[2rem] shadow-sm card-hover">
-                    <h3 class="font-bold mb-2">Marks & Spencer</h3>
-                    <p class="text-xs text-slate-500 mb-4">Sezon sonu indirimlerinde %50'ye varan fırsatlar.</p>
-                </div>
-                <div class="bg-white p-6 rounded-[2rem] shadow-sm card-hover">
-                    <h3 class="font-bold mb-2">Dagi</h3>
-                    <p class="text-xs text-slate-500 mb-4">Seçili ürünlerde NET %50 indirim.</p>
+                <!-- İndirimler -->
+                <div class="flex-1 bento-card p-8 bg-slate-900 text-white rounded-[2rem]">
+                    <h3 class="text-xl font-bold mb-4">Sezon İndirimleri</h3>
+                    <ul class="text-xs space-y-3 opacity-80">
+                        <li>• Marks & Spencer: %50'ye varan indirim</li>
+                        <li>• Dagi: Seçili ürünlerde NET %50 indirim</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-
-        <section id="sinema" class="bg-armada-navy text-white p-10 rounded-[2rem] card-hover">
-            <h2 class="text-2xl font-bold mb-4">SİNEMA</h2>
-            <p class="text-sm opacity-80 mb-6 max-w-lg">11 Salon, 1300 kişi kapasiteli Art House ve Gold Class Salonları ile Sinema Armada 1 Kat 4'de hizmetinizde.</p>
-            <a href="#" class="bg-armada-red px-6 py-3 rounded-full text-xs font-bold uppercase">Tüm Filmler & Seanslar</a>
-        </section>
-
+        </div>
     </main>
+
 </body>
 </html>
