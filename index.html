@@ -10,20 +10,12 @@
         .font-heading { font-family: 'Playfair Display', serif; }
         .font-body { font-family: 'Plus Jakarta Sans', sans-serif; }
         
-        /* Glassmorphism Efekti */
-        .glass {
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
+        .glass { background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .glass-btn { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.4); }
         
-        /* Buton için özel glass */
-        .glass-btn {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
+        /* Kayan Şerit Animasyonu */
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-marquee { animation: marquee 20s linear infinite; }
     </style>
 </head>
 <body class="bg-stone-100 text-stone-800 font-body">
@@ -31,8 +23,7 @@
     <!-- NAVBAR -->
     <nav class="max-w-6xl mx-auto p-8 flex justify-between items-center">
         <h1 class="text-xl font-bold tracking-widest uppercase">Sıla Sak <span class="text-rose-400">Beauty</span></h1>
-        <!-- Buton güncellendi -->
-        <a href="https://wa.me/905461253393" class="glass-btn px-6 py-2 rounded-full text-xs font-bold hover:bg-rose-400 hover:text-white transition">RANDEVU AL</a>
+        <a href="https://wa.me/905393434615" class="glass-btn px-6 py-2 rounded-full text-xs font-bold hover:bg-rose-400 hover:text-white transition">RANDEVU AL</a>
     </nav>
 
     <!-- HERO -->
@@ -40,27 +31,15 @@
         <div class="glass p-12 rounded-[2rem] text-center shadow-lg">
             <h2 class="font-heading text-5xl mb-6">Konya Ereğli'de Zarafetin Adresi</h2>
             <p class="max-w-lg mx-auto text-stone-600 mb-8">Profesyonel tırnak sanatı, kalıcı makyaj ve güzellik uygulamalarıyla kendinizi özel hissedin.</p>
-            <!-- Buton güncellendi -->
-            <a href="https://wa.me/905461253393" class="inline-block glass-btn px-8 py-4 rounded-full font-bold hover:bg-rose-400 hover:text-white transition">WhatsApp'tan İletişime Geç</a>
+            <a href="https://wa.me/905393434615" class="inline-block glass-btn px-8 py-4 rounded-full font-bold hover:bg-rose-400 hover:text-white transition">WhatsApp'tan İletişime Geç</a>
         </div>
     </header>
 
-    <!-- HİZMETLER -->
-    <section class="max-w-6xl mx-auto px-8 py-10">
-        <h3 class="text-sm font-bold text-stone-400 mb-10 text-center uppercase tracking-widest">Uygulamalarımız</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div class="glass p-6 rounded-2xl shadow-sm">
-                <h4 class="font-bold mb-2">Protez Tırnak</h4>
-            </div>
-            <div class="glass p-6 rounded-2xl shadow-sm">
-                <h4 class="font-bold mb-2">Kalıcı Oje</h4>
-            </div>
-            <div class="glass p-6 rounded-2xl shadow-sm">
-                <h4 class="font-bold mb-2">İpek Kirpik</h4>
-            </div>
-            <div class="glass p-6 rounded-2xl shadow-sm">
-                <h4 class="font-bold mb-2">Kaş Tasarımı</h4>
-            </div>
+    <!-- HİZMET ŞERİDİ (Marquee) -->
+    <section class="py-10 overflow-hidden bg-white/30 border-y border-white/50">
+        <div class="flex animate-marquee gap-16 whitespace-nowrap text-rose-500 font-bold tracking-widest uppercase text-sm">
+            <span>💅 Protez Tırnak</span> <span>👁️ İpek Kirpik</span> <span>✨ Kalıcı Oje</span> <span>💄 Kalıcı Makyaj</span> <span>🌸 Cilt Bakım</span> <span>☀️ Lazer Epilasyon</span>
+            <span>💅 Protez Tırnak</span> <span>👁️ İpek Kirpik</span> <span>✨ Kalıcı Oje</span> <span>💄 Kalıcı Makyaj</span> <span>🌸 Cilt Bakım</span> <span>☀️ Lazer Epilasyon</span>
         </div>
     </section>
 
