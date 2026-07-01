@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Premium hissi veren özel font -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -11,7 +12,9 @@
             theme: {
                 extend: {
                     fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
-                    colors: { armada: { navy: '#001b44', red: '#d90416', light: '#f4f6f8' } }
+                    colors: {
+                        armada: { navy: '#001b44', red: '#d90416', light: '#f4f6f8' }
+                    }
                 }
             }
         }
@@ -20,11 +23,12 @@
         .premium-blur { backdrop-filter: saturate(180%) blur(20px); }
         .bento-card { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .bento-card:hover { transform: scale(0.98); }
+        /* Marquee Animasyonu */
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .animate-marquee { animation: marquee 25s linear infinite; }
     </style>
 </head>
-<body class="bg-armada-light text-slate-800 antialiased">
+<body class="bg-armada-light text-slate-800 antialiased selection:bg-armada-red selection:text-white">
 
     <!-- ULTRA MODERN NAVBAR -->
     <nav class="fixed w-full top-0 z-[100] bg-white/70 premium-blur border-b border-black/5">
@@ -32,18 +36,22 @@
             <a href="#" class="text-3xl font-extrabold tracking-tighter text-armada-navy">
                 ARMADA<span class="text-armada-red">.</span>
             </a>
+            
             <div class="hidden lg:flex gap-10 text-[13px] font-semibold tracking-[0.15em] text-slate-500">
-                <a href="#magazalar" class="hover:text-armada-navy transition-colors">MAĞAZALAR</a>
-                <a href="#yemeicme" class="hover:text-armada-navy transition-colors">YEME & İÇME</a>
-                <a href="#etkinlikler" class="hover:text-armada-navy transition-colors">ETKİNLİKLER</a>
+                <a href="#" class="hover:text-armada-navy transition-colors">MAĞAZALAR</a>
+                <a href="#" class="hover:text-armada-navy transition-colors">YEME & İÇME</a>
+                <a href="#" class="hover:text-armada-navy transition-colors">ETKİNLİKLER</a>
+                <a href="#" class="text-armada-red hover:text-red-700 transition-colors">KAMPANYALAR</a>
             </div>
-            <a href="#kampanyalar" class="hidden md:flex items-center gap-3 bg-armada-navy text-white px-7 py-3.5 rounded-full text-xs font-bold hover:bg-slate-800 transition-colors">
+
+            <a href="#" class="hidden md:flex items-center gap-3 bg-armada-navy text-white px-7 py-3.5 rounded-full text-xs font-bold hover:bg-slate-800 transition-colors">
                 <span>ZİYARET PLANLA</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
         </div>
     </nav>
 
-    <!-- HERO ALANI -->
+    <!-- PREMIUM BENTO GRID HERO ALANI -->
     <main class="max-w-7xl mx-auto px-6 lg:px-12 pt-36 pb-10">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-auto lg:h-[600px]">
             <div class="lg:col-span-2 bento-card relative rounded-[2rem] overflow-hidden bg-slate-900 group cursor-pointer shadow-sm">
@@ -54,28 +62,48 @@
                     <h2 class="text-5xl lg:text-7xl font-bold tracking-tighter leading-[1.1] mb-4">
                         Yazın<br>Ritmini<br>Hisset.
                     </h2>
+                    <p class="text-lg font-light text-white/70 max-w-sm mb-8">Dünyaca ünlü markaların yeni sezon koleksiyonları Armada'da.</p>
                 </div>
             </div>
 
             <div class="flex flex-col gap-6">
-                <div class="flex-1 bento-card p-8 bg-white border border-slate-100 shadow-sm rounded-[2rem] cursor-pointer">
-                    <i class="fa-solid fa-film text-2xl text-armada-navy mb-4"></i>
-                    <h3 class="text-2xl font-bold text-armada-navy">Cinemaximum</h3>
+                <div class="flex-1 bento-card relative rounded-[2rem] p-8 bg-white border border-slate-100 shadow-sm flex flex-col justify-between group cursor-pointer">
+                    <div class="flex justify-between items-start">
+                        <div class="bg-slate-100 w-12 h-12 rounded-full flex items-center justify-center text-armada-navy">
+                            <i class="fa-solid fa-film text-lg"></i>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-300 group-hover:text-armada-red transition-colors"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-armada-navy tracking-tight mb-2">Cinemaximum</h3>
+                        <p class="text-sm text-slate-500 font-medium">Haftanın vizyondaki filmleri ve seans bilgileri.</p>
+                    </div>
                 </div>
-                <div class="flex-1 bento-card p-8 bg-armada-navy text-white rounded-[2rem] cursor-pointer">
-                    <i class="fa-solid fa-utensils text-2xl mb-4"></i>
-                    <h3 class="text-2xl font-bold">Lezzet Noktaları</h3>
+
+                <div class="flex-1 bento-card relative rounded-[2rem] p-8 bg-armada-navy text-white flex flex-col justify-between group cursor-pointer overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 opacity-10 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fa-solid fa-utensils text-[150px]"></i>
+                    </div>
+                    <div class="relative z-10 flex justify-between items-start">
+                        <span class="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">Gastronomi</span>
+                    </div>
+                    <div class="relative z-10 mt-auto">
+                        <h3 class="text-2xl font-bold tracking-tight mb-2">Lezzet Durağı</h3>
+                        <p class="text-sm text-white/70 font-light">Dünya mutfağından seçkin tatları keşfedin.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- MARKA ŞERİDİ -->
+        <!-- MARKA ŞERİDİ (MARQUEE) -->
         <div class="mt-12 overflow-hidden py-10 border-y border-black/5">
             <div class="flex animate-marquee gap-20 whitespace-nowrap opacity-40 font-bold text-2xl tracking-tighter text-slate-800">
                 <span>ZARA</span> <span>BERSHKA</span> <span>PULL&BEAR</span> <span>STRADIVARIUS</span> <span>MASSIMO DUTTI</span> <span>OYSHO</span>
+                <!-- Kesintisiz döngü için tekrar -->
                 <span>ZARA</span> <span>BERSHKA</span> <span>PULL&BEAR</span> <span>STRADIVARIUS</span> <span>MASSIMO DUTTI</span> <span>OYSHO</span>
             </div>
         </div>
     </main>
+
 </body>
 </html>
