@@ -49,23 +49,48 @@
     </section>
 
     <!-- HİZMETLER -->
-    <section id="hizmetler" class="max-w-6xl mx-auto px-8 pb-20">
-        <h2 class="text-3xl font-semibold mb-12">Uygulamalarımız</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="card-glass p-8 rounded-3xl">
-                <h3 class="font-semibold text-xl mb-3">Tırnak Sanatı</h3>
-                <p class="text-stone-600 text-sm font-light">Protez tırnak, kalıcı oje ve profesyonel tırnak bakımı.</p>
-            </div>
-            <div class="card-glass p-8 rounded-3xl">
-                <h3 class="font-semibold text-xl mb-3">Bakış Estetiği</h3>
-                <p class="text-stone-600 text-sm font-light">Altın oran kaş tasarımı ve ipek kirpik uygulamaları.</p>
-            </div>
-            <div class="card-glass p-8 rounded-3xl">
-                <h3 class="font-semibold text-xl mb-3">Cilt & Vücut</h3>
-                <p class="text-stone-600 text-sm font-light">Profesyonel cilt bakımı ve lazer epilasyon.</p>
-            </div>
+   <!-- FİYAT LİSTESİ VE FORM -->
+<section id="hizmetler" class="max-w-4xl mx-auto px-8 py-20">
+    <h2 class="text-3xl font-semibold mb-12 text-center">Fiyat Listemiz & Randevu</h2>
+    
+    <!-- Fiyatlar (Akordiyon gibi çalışır) -->
+    <div class="space-y-4 mb-12">
+        <div class="card-glass p-6 rounded-2xl">
+            <details class="group">
+                <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-lg">
+                    Tırnak Sanatı (Protez, Kalıcı Oje)
+                    <span class="text-sm text-stone-500">Detaylar</span>
+                </summary>
+                <p class="text-stone-600 mt-4 font-light border-t pt-4">Protez Tırnak: 700 TL | Kalıcı Oje: 400 TL</p>
+            </details>
         </div>
-    </section>
+        <div class="card-glass p-6 rounded-2xl">
+            <details class="group">
+                <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-lg">
+                    Bakış Estetiği
+                    <span class="text-sm text-stone-500">Detaylar</span>
+                </summary>
+                <p class="text-stone-600 mt-4 font-light border-t pt-4">Kaş Tasarım: 300 TL | İpek Kirpik: 600 TL</p>
+            </details>
+        </div>
+    </div>
+
+    <!-- Hızlı Randevu Formu (WhatsApp'a mesaj atar) -->
+    <div class="bg-black text-white p-8 rounded-3xl">
+        <h3 class="text-xl font-semibold mb-6">Randevu Başlat</h3>
+        <form id="randevuForm" class="grid gap-4">
+            <input type="text" id="isim" placeholder="Adınız Soyadınız" class="p-4 rounded-xl text-black w-full">
+            <select id="hizmet" class="p-4 rounded-xl text-black w-full">
+                <option>Tırnak Sanatı</option>
+                <option>Bakış Estetiği</option>
+                <option>Cilt Bakımı</option>
+            </select>
+            <button type="button" onclick="gonder()" class="bg-white text-black font-bold py-4 rounded-xl hover:bg-zinc-200 transition">
+                WhatsApp'tan Onay Al
+            </button>
+        </form>
+    </div>
+</section>
 
     <!-- FOOTER -->
     <footer class="py-20 text-center text-sm text-stone-500 font-light border-t border-stone-200">
